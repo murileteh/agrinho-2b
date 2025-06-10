@@ -1,0 +1,262 @@
+:root {
+  --verde-escuro: #2e8b57;
+  --verde-lima: #a4de02;
+  --laranja: #ff7f50;
+  --amarelo: #f6c90e;
+  --branco: #ffffff;
+  --cinza-claro: #f0f0f0;
+  --cinza-escuro: #333333;
+  --fonte-principal: 'Roboto', sans-serif;
+  --fonte-titulo: 'Rye', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cinza-claro);
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+}
+
+/* Header com logotipo SVG */
+header {
+  background: linear-gradient(135deg, var(--verde-lima), var(--verde-escuro));
+  color: var(--branco);
+  text-align: center;
+  padding: 40px 20px;
+  font-family: var(--fonte-titulo);
+  text-shadow: 1px 1px 4px #00000060;
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: var(--verde-escuro);
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--laranja);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: var(--laranja);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--branco);
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: 0 20px;
+  text-shadow: 2px 2px 6px #000;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Seções principais */
+.content {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.content h2 {
+  color: var(--verde-escuro);
+  margin-bottom: 15px;
+  font-size: 2em;
+  opacity: 0;
+  animation: slideIn 0.6s forwards;
+}
+
+.content p {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+figure {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--branco);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: var(--branco);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+
+tr:nth-child(even) {
+  background-color: #fffaf0;
+}
+
+/* Formulário */
+form {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--verde-escuro);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--verde-lima);
+  outline: none;
+}
+
+button {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #246b45;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9em;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    font-size: 1.6em;
+    height: 300px;
+  }
+
+  nav a {
+    margin: 10px;
+    font-size: 1em;
+  }
+
+  .content {
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FestejaConecta - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #main-content {
+      display: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="usuario" placeholder="Usuário" required>
+    <input type="password" id="senha" placeholder="Senha" required>
+    <button onclick="validarLogin()">Entrar</button>
+  </div>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div id="main-content">
+  <header id="inicio">
+    <div class="logo">
+      <svg width="200" height="60" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="65" font-family="'Rye', cursive" font-size="60" fill="#ffffff" stroke="#000" stroke-width="2">
+          FestejaConecta
+        </text>
+      </svg>
+    </div>
+    <p>Celebrando a conexão entre o campo e a cidade</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#programacao">Programação</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="hero">
+    Bem-vindo ao maior encontro entre o campo e a cidade!
+  </div>
+
+  <section class="content">
+    <h2>Sobre o Evento</h2>
+    <p>O FestejaConecta é um evento único que une tradição rural e inovação urbana. Durante vários dias, oferecemos atividades culturais, oficinas, gastronomia regional, shows e muita troca de saberes entre quem vive no campo e na cidade.</p>
+  </section>
+
+  <section id="galeria" class="content">
+    <h2>Galeria de Fotos</h2>
+    <p>Confira alguns registros de festas agropecuárias anteriores que celebram a cultura rural:</p>
+    <div class="gallery">
+      <figure>
+        <img src="https://i.imgur.com/LfTPTFe.jpg" alt="Feira Regional">
+        <figcaption>Feira Regional</figcaption>
+      </figure>
+      <figure>
+        <img src="https://i.imgur.com/yOpxDJh.jpg" alt="Exposição Agro 2023">
+        <figcaption>Exposição Agro 2023</figcaption>
+      </figure>
+      <figure>
+        <img src="https://i.imgur.com/wEnJhNL.jpg" alt="Cultura e Tradição">
+        <figcaption>Cultura & Tradição</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="programacao" class="content">
+    <h2>Programação</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Atividade</th>
+          <th>Local</th>
+          <th>Horário</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/08/2025</td>
+          <td>Feira de Produtos Locais</td>
+          <td>Praça Central</td>
+          <td>10h - 20h</td>
+        </tr>
+        <tr>
+          <td>11/08/2025</td>
+          <td>Oficina de Agricultura Sustentável</td>
+          <td>Espaço Verde</td>
+          <td>14h - 16h</td>
+        </tr>
+        <tr>
+          <td>12/08/2025</td>
+          <td>Show com Banda Raízes do Sertão</td>
+          <td>Palco Principal</td>
+          <td>20h</td>
+        </tr>
+        <tr>
+          <td>13/08/2025</td>
+          <td>Palestra: O Futuro do Agro</td>
+          <td>Auditório RuralTech</td>
+          <td>10h</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="contato" class="content">
+    <h2>Fale Conosco</h2>
+    <p>Tem dúvidas, sugestões ou quer participar do evento? Entre em contato conosco!</p>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/5543998555462" target="_blank">(43) 99855-5462</a></li>
+      <li>Email: <a href="mailto:mh757320@gmail.com">mh757320@gmail.com</a></li>
+    </ul>
+
+    <form action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h3>Localização do Evento - Ivaiporã</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.1752261691834!2d-51.66219718463373!3d-24.248279281878456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ead3fef387e28b%3A0x234a573a56701d90!2sIvaipor%C3%A3%2C%20PR%2C%2086820-000!5e0!3m2!1spt-BR!2sbr!4v1717456765956" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 FestejaConecta. Todos os direitos reservados.
+  </footer>
+</div>
+
+<script>
+  function validarLogin() {
+    const usuario = document.getElementById('usuario').value;
+    const senha = document.getElementById('senha').value;
+
+    // Login simples (exemplo)
+    if (usuario === "admin" && senha === "1234") {
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    } else {
+      alert("Usuário ou senha incorretos!");
+    }
+  }
+</script>
+
+</body>
+</html>
